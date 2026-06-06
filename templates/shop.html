@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}
+Shop | Parth Selection
+{% endblock %}
+
+{% block content %}
+
+<h1>Our Collection</h1>
+
+<div class="products">
+
+    {% for product in products %}
+
+    <div class="card">
+
+        <h2>{{ product.name }}</h2>
+
+        <p>₹ {{ product.price }}</p>
+
+        <p>{{ product.description|truncatechars:50 }}</p>
+
+    </div>
+
+    {% empty %}
+
+    <h2>No Products Available</h2>
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}
