@@ -1,37 +1,107 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f8f8f8;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f8f8f8;
 }
 
-nav{
-    background-color: black;
-    color: white;
-    padding: 20px 50px;
+.navbar{
+    background:black;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
 }
 
-nav h2{
-    font-size: 30px;
+.logo a{
+    color:white;
+    text-decoration:none;
+    font-size:32px;
+    font-weight:bold;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:gold;
+}
+
+.icons{
+    font-size:24px;
 }
 
 h1{
-    margin-top: 50px;
-    text-align: center;
-    font-size: 50px;
+    text-align:center;
+    margin-top:100px;
+    font-size:55px;
 }
 
 h2{
-    text-align: center;
-    margin-top: 15px;
+    text-align:center;
+    margin-top:15px;
 }
 
 p{
+    text-align:center;
+    margin-top:20px;
+    font-size:20px;
+}
+
+.hero{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    margin-top: 20px;
-    font-size: 18px;
+
+    background: linear-gradient(
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.55)
+    ),
+    url("https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1600");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content h1{
+    color: white;
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.hero-content p{
+    color: white;
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.shop-btn{
+    background: white;
+    color: black;
+    text-decoration: none;
+    padding: 15px 35px;
+    font-size: 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.shop-btn:hover{
+    background: gold;
 }
