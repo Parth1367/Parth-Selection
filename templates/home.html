@@ -24,4 +24,29 @@ Home | Parth Selection
 
 </section>
 
+<section class="products">
+
+    {% for product in products %}
+
+    <div class="card">
+
+        <h2>{{ product.name }}</h2>
+
+        <p>₹ {{ product.price }}</p>
+
+        <p>{{ product.description|truncatechars:50 }}</p>
+
+    </div>
+
+    {% empty %}
+
+    <div class="card">
+        <h2>No Products Yet</h2>
+        <p>Go to Admin Panel and add products.</p>
+    </div>
+
+    {% endfor %}
+
+</section>
+
 {% endblock %}

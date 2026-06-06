@@ -105,3 +105,38 @@ p{
 .shop-btn:hover{
     background: gold;
 }
+
+.products{
+    width: 90%;
+    margin: 80px auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap: 35px;
+}
+
+.card{
+    background: white;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+
+    transition: all .4s ease;
+    cursor: pointer;
+}
+
+.card:hover{
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.18);
+}
+
+.card h2{
+    margin-bottom: 20px;
+    color: #111;
+}
+
+.card p{
+    color: #666;
+    margin-top: 10px;
+    line-height: 1.7;
+}
