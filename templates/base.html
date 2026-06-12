@@ -2,44 +2,161 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>
         {% block title %}
         Parth Selection
         {% endblock %}
     </title>
 
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Font Awesome Icons -->
+    <link 
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Main CSS -->
+    <link 
+        rel="stylesheet" 
+        href="{% static 'css/style.css' %}"
+    >
+
+    <!-- Browser Tab Logo -->
+    <link 
+        rel="icon" 
+        type="image/png"
+        href="{% static 'images/favicon.png' %}"
+    >
+
 </head>
+
 
 <body>
 
+    <!-- ================= NAVBAR ================= -->
+
     <nav class="navbar">
 
+
+        <!-- Logo -->
+
         <div class="logo">
-            <a href="/">Parth Selection</a>
+
+            <a href="/">
+
+                <img 
+                    src="{% static 'images/logo.png' %}" 
+                    alt="Parth Selection Logo"
+                >
+
+            </a>
+
         </div>
+
+
+        <!-- Navigation Links -->
 
         <ul class="nav-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">Men</a></li>
-            <li><a href="#">Women</a></li>
-            <li><a href="#">Contact</a></li>
+
+            <li>
+                <a href="/">Home</a>
+            </li>
+
+            <li>
+                <a href="/shop">
+                    Shop
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    Men
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    Women
+                </a>
+            </li>
+
         </ul>
 
-        <div class="icons">
-            🔍 ❤️ 🛒
+
+
+        <!-- Right Side Navbar -->
+
+        <div class="nav-right">
+
+
+            <!-- Search -->
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input 
+                    type="text"
+                    placeholder="Search Fashion"
+                >
+
+            </div>
+
+
+
+            <!-- Wishlist -->
+
+            <a href="#" class="nav-icon">
+
+                <i class="fa-regular fa-heart"></i>
+
+            </a>
+
+
+
+            <!-- Cart -->
+
+            <a href="#" class="nav-icon cart-icon">
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <span>0</span>
+
+            </a>
+
+
+
+            <!-- Login -->
+
+            <a href="#" class="login-btn">
+
+                Login
+
+            </a>
+
+
         </div>
+
 
     </nav>
 
+
+
+    <!-- Main Website Content -->
+
     <main>
+
         {% block content %}
+
         {% endblock %}
+
     </main>
 
+
 </body>
+
 </html>
